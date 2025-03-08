@@ -69,6 +69,7 @@ export class MessageServices {
 
   async sendMessageToLine(userId: string, profile: any) {
     const flexContents = await flexMessage(profile)
+    console.log(userId)
     if (!flexContents) {
       throw new Error("Failed to generate flex message");
     }
